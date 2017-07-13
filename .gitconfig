@@ -1,0 +1,40 @@
+# local user config
+[include]
+    path = ~/.gitconfig-local
+
+# coloring
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta
+    plain = white bold
+    old = red bold
+    new = green bold
+    commit = yellow bold
+    func = green dim
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+# settings
+[commit]
+    verbose = true
+
+# aliases
+[alias]
+    m = checkout master
+    cm = commit
+    p = push origin master
+    l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset'
+
+    # log incoming commits
+    li = !git l HEAD..@{upstream}
+
+    # log outgoing commits
+    lo = !git l @{upstream}..HEAD
