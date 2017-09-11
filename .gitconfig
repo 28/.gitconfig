@@ -30,7 +30,7 @@
 [alias]
     m = checkout master
     cm = commit
-    p = push origin master
+    pm = push origin master
     l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset'
 
     # log incoming commits
