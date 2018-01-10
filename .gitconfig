@@ -38,13 +38,18 @@
 
 # aliases
 [alias]
+    # basic
     m = checkout master
     cm = commit
     pm = push origin master
-    l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset'
 
+    # log
+    l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset'
     # log incoming commits
     li = !git l HEAD..@{upstream}
-
     # log outgoing commits
     lo = !git l @{upstream}..HEAD
+
+    # patches
+    # create patch from feature branch with master as base
+    fmtp = format-patch --summary master
