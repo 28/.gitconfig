@@ -1,6 +1,6 @@
 # local user config
 [include]
-    path = ~/.gitconfig-local
+    path = .gitconfig-local
 
 # coloring
 [color "branch"]
@@ -23,18 +23,11 @@
     untracked = cyan
 
 # settings
-[core]
-	## editor = vim
-	editor = notepad++
-
-[merge]
-	tool = meld
-
-[mergetool "meld"]
-	cmd = "/c/Meld/meld/meld.exe $PWD/$LOCAL $PWD/$BASE $PWD/$REMOTE --output=$PWD/$MERGED"
-
 [commit]
     verbose = true
+
+[include]
+    path = .gitconfig-tools
 
 # aliases
 [alias]

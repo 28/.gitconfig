@@ -1,0 +1,21 @@
+[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+
+[merge]
+    tool = meld
+
+[mergetool "meld"]
+    name = meld
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+
+[difftool]
+    prompt = false
+
+[diff]
+    tool = meld
+
+[difftool "meld"]
+    name = meld
+    cmd = meld "$LOCAL" "$REMOTE"
