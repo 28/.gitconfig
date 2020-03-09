@@ -12,7 +12,7 @@
     cmd = "C:/prog/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
 
 [difftool]
-	prompt = false
+    prompt = false
 
 [diff]
     tool = winmerge
